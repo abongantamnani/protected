@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abonga Ntamnani | Best Developer</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #111;
+            color: #fff;
+            overflow-x: hidden;
+            font-size: 16px;
+            position: relative;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(45deg, #ff7e5f, #feb47b);
+            position: relative;
+            animation: backgroundChange 5s ease infinite;
+            overflow: hidden;
+        }
+
+        /* Cloud Effect */
+        .clouds {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/clouds.png') repeat;
+            opacity: 0.15;
+            animation: moveClouds 60s linear infinite;
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            animation: slideIn 2s ease-out;
+            color: #fff;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #fff;
+            animation: slideIn 3s ease-out;
+        }
+
+        .cta-btn {
+            font-size: 1.5rem;
+            padding: 12px 40px;
+            border: 2px solid #fff;
+            background-color: transparent;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            border-radius: 50px;
+            animation: bounceIn 2s infinite;
+        }
+
+        .cta-btn:hover {
+            background-color: #fff;
+            color: #ff7e5f;
+            transform: scale(1.1);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 60px 20px;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            background-color: #333;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            width: 250px;
+            height: 300px;
+            background-color: #444;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            transition: transform 0.4s ease;
+            border: 2px solid #ff7e5f;
+            margin: 10px;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #ff7e5f;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-icon:hover {
+            transform: rotate(360deg);
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        /* Mobile Apps Section */
+        .mobile-apps {
+            padding: 60px 20px;
+            background-color: #222;
+            text-align: center;
+        }
+
+        .mobile-apps h2 {
+            font-size: 2.5rem;
+            color: #ff7e5f;
+            margin-bottom: 20px;
+        }
+
+        .mobile-app-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .mobile-app-card {
+            width: 250px;
+            height: 300px;
+            background-color: #444;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            transition: transform 0.4s ease;
+            margin: 10px;
+            border: 2px solid #ff7e5f;
+            color: #fff;
+        }
+
+        .mobile-app-card:hover {
+            transform: translateY(-15px);
+        }
+
+        .mobile-app-icon {
+            font-size: 3rem;
+            color: #ff7e5f;
+            margin-bottom: 15px;
+        }
+
+        .mobile-app-title {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        /* Price Section */
+        .pricing {
+            text-align: center;
+            background-color: #222;
+            padding: 50px 20px;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ff7e5f;
+            margin-top: 20px;
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes backgroundChange {
+            0% { background: linear-gradient(45deg, #ff7e5f, #feb47b); }
+            50% { background: linear-gradient(45deg, #6a11cb, #2575fc); }
+            100% { background: linear-gradient(45deg, #ff7e5f, #feb47b); }
+        }
+
+        @keyframes bounceIn {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes moveClouds {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Small Screens */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .cta-btn {
+                font-size: 1.2rem;
+                padding: 10px 30px;
+            }
+
+            .services {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-card {
+                width: 80%;
+                margin: 10px 0;
+            }
+
+            .mobile-app-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .mobile-app-card {
+                width: 80%;
+                margin: 10px 0;
+            }
+
+            .mobile-apps h2 {
+                font-size: 2rem;
+            }
+
+            .service-icon {
+                font-size: 2.5rem;
+            }
+
+            .price {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <!-- Clouds Background -->
+        <div class="clouds"></div>
+
+        <h1>Abonga Ntamnani</h1>
+        <p>Empowering Your Ideas, One Line of Code at a Time</p>
+        <button class="cta-btn" onclick="window.location.href='https://wa.me/0684423555'">Get Started</button>
+    </div>
+
+    <!-- Services Section -->
+    <div class="services">
+        <div class="service-card">
+            <div class="service-icon">💻</div>
+            <div class="service-title">Website Development</div>
+            <p>Custom websites designed to meet your needs</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">🔧</div>
+            <div class="service-title">Technical Support</div>
+            <p>24/7 support for all your tech needs</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">💡</div>
+            <div class="service-title">Affordable Solutions</div>
+            <p>Quality work at unbeatable prices (Only R40/month)</p>
+        </div>
+    </div>
+
+    <!-- Mobile Apps Section -->
+    <div class="mobile-apps">
+        <h2>Mobile Applications</h2>
+        <div class="mobile-app-container">
+            <div class="mobile-app-card">
+                <div class="mobile-app-icon">📱</div>
+                <div class="mobile-app-title">Mobile App Development</div>
+                <p>Get your app on the Play Store for only R100/month!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing Section -->
+    <div class="pricing">
+        <h2>Affordable Pricing</h2>
+        <p>R40 per month for website development & continuous support</p>
+        <p>R100 per month for mobile app development (on Play Store)</p>
+        <div class="price">R40/month (Website) | R100/month (App)</div>
+    </div>
+
+    <script>
+        // JavaScript for additional functionality can be added here
+    </script>
+
+</body>
+</html>
